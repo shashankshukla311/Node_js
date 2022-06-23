@@ -1,0 +1,134 @@
+Node.js is an open source server environment
+Node.js is free
+Node.js runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)
+Node.js uses JavaScript on the server
+
+
+Name - the name of your project. Has a maximum of 214 characters all lowercase with a leading period(.) or underscore(-).
+Version - the initial/current version of your project.
+Description - a short description of what your project does. It gives a hint on what your project is about.
+Main - the project main/entry file.
+Scripts - trigger testing, building, and trimming.
+Keywords - related tags to your project.
+Repository - point to the public GitHub repository where your code will be hosted live.
+Author - the owner of the project.
+License - indicates what license module you are using. Open-source NPM recognizes MIT as the default license.
+Dependencies - packages the project needs to run on production.
+DevDependencies - package the project needs to use for development purposes such as testing libraries.
+
+============Example===========
+{
+  "name": "myapp",
+  "version": "2.1.0",
+  "description": "this is my first project",
+  "main": "index.js",
+  "scripts": {
+    "test": "hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "my git repo"
+  },
+  "keywords": [
+    "my",
+    "first",
+    "project",
+    "with",
+    "npm",
+    "cli"
+  ],
+  "author": "me",
+  "license": "ISC"
+}
+
+
+{
+  "name": "metaverse", // The name of your project
+  "version": "0.92.12", // The version of your project
+  "description": "The Metaverse virtual reality. The final outcome of all virtual worlds, augmented reality, and the Internet.", // The description of your project
+  "main": "index.js"
+  "license": "MIT" // The license of your project
+}
+
+
+node -v
+npm -v
+
+npm init # This will trigger the initialization
+npm init --yes # This will trigger automatically populated initialization.
+npm init -y # This will trigger automatically populated initialization, using the -y alias
+
+
+npm config set init-author-name "Nikhil"
+npm set init-license "MIT"
+
+
+npm config get init-author-name
+npm get init-license
+
+
+npm config delete init-author-name
+npm config delete init-license
+
+
+npm install <module> # Where <module> is the name of the module you want to install
+npm i <module> # Where <module> is the name of the module you want to install - using the i alias for installation
+npm install moment
+
+npm install <module> --save # Where <module> is the name of the module you want to install
+npm install moment --save
+
+npm install <module> --save-dev # Where <module> is the name of the module you want to install
+npm install lodash --save-dev
+npm install lodash@4.17.19 ## install lodash version 4.17.19
+
+npm uninstall moment
+npm uninstall moment --save
+
+npm uninstall lodash
+npm uninstall lodash --save-dev
+
+
+npm install <module> --global # Where <module> is the name of the module you want to install globally
+npm install moment --global
+
+npm update --global ## update global packages
+npm install <module>@1.0.0 --global ## install a specific package version globally
+
+npm install <module> -g # Where <module> is the name of the module you want to install globally, using the -g alias
+npm install moment -g
+
+npm uninstall <module> --global ## uninstall a global package
+npm uninstall moment --global
+
+npm list
+npm list --depth 1
+npm list --depth 0
+npm list --global true --depth 1
+
+==============================================================================================================================
+
+23/06/2022
+==========
+
+Npm
+---
+Npm stands for Node Package Manager. It is a package manager for the Node JavaScript platform.
+Npm is known as the world’s largest software registry. Open-source developers all over the world use npm to publish and share their source code.
+
+Npm consists of three components:
+
+The website allows you to find third-party packages, set up profiles, and manage your packages.
+The command-line interface or npm CLI that runs from a terminal to allow you to interact with npm.
+The registry is a large public database of JavaScript code.
+
+
+package.json
+-------------
+In general, every npm project has a file called package.json located in the root directory. 
+The package.json is a plain text file that contains important information that npm uses to identify the project and handle dependencies.
+
+
+Basically, the devDependencies should contain packages that you use during development. These packages are necessary only while you are developing your application.
+
+On the other hand, the dependencies should contain packages on which your application will depend. In other words, without these dependencies packages, your application will not work.
